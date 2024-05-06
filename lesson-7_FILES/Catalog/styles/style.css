@@ -1,0 +1,141 @@
+:root {
+    --accent-color: #46A358;
+    --secondary-color: #3D3D3D;
+    --main-color: #FFFFFF;
+    --bg-secondary-color: #FBFBFB;
+
+    --font-sm: 14px;
+    --font-md: 16px;
+    --font-xl: 18px;
+
+    --content-width: 1300px;
+
+    --categories-menu-width: 310px;
+    --catalog-gap: 50px;
+    --categories-menu-full-width: calc(var(--categories-menu-width) + var(--catalog-gap));
+}
+
+
+body {
+    font-family: 'Cera Pro DEMO', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: var(--font-md);
+}
+
+a {
+    font-size: var(--font-md);
+    color: var(--secondary-color);
+    text-decoration: none;
+    display: inline-block;
+}
+
+.container {
+    max-width: var(--content-width);
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.catalog {
+    margin-top: 20px;
+}
+
+.catalog__content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--catalog-gap);
+}
+
+.catalog__categories {
+    background-color: var(--bg-secondary-color);
+    border: 1px solid #ccc;
+    padding: 15px;
+    min-width: var(--categories-menu-width);
+    flex: 0 0 var(--categories-menu-width);
+}
+
+ol,li {
+    display: flex;
+    justify-content: space-between;
+    font-weight: normal;
+    font-size: 18px;
+
+}
+
+.span {
+    text-align: right;
+}
+
+
+.catalog__product a.active {
+    color: green;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.catalog__categories h4 {
+    font-size: var(--font-xl);
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+
+.catalog__categories a.active {
+    color: var(--accent-color);
+}
+
+.catalog__categories ul {
+    display: flex;
+    gap: 25px;
+    flex-direction: column;
+}
+
+.catalog__categories ul li:last-child img {
+    margin-top: 500px;
+    min-width:  280px;
+    margin-right: auto;
+}
+/*.catalog__categories li {*/
+/*    margin-bottom: 10px;*/
+/*}*/
+/*.catalog__categories li:last-child {*/
+/*    margin-bottom: 0;*/
+/*}*/
+
+/*.catalog__categories li:not(:last-child) {*/
+/*    margin-bottom: 10px;*/
+/*}*/
+
+.catalog__products {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--catalog-gap);
+    margin-top: 30px;
+}
+
+.catalog__product {
+    flex: 0 0 calc(33.33% - (var(--catalog-gap) * 2 / 3));
+    max-width: calc(33.33% - (var(--catalog-gap) * 2 / 3));
+}
+
+.page {
+    display: flex;
+    justify-content: flex-end;
+    gap: 5px;
+    margin-right: 400px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.button-image {
+    width: 35px;
+    height: 35px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.arrow {
+    width: auto;
+    height: 35px;
+}
